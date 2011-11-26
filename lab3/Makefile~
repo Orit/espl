@@ -1,0 +1,11 @@
+
+testdiff: testdiff.o diff.o bfix.o
+
+testdiff.o: testdiff.c diff.h 
+
+bfix.o: bfix.c
+
+diff.o: diff.c diff.h
+
+clean:
+	rm *.o
