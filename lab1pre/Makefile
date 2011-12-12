@@ -5,10 +5,10 @@ PROGNAME=invert
 all: start
 
 start:    invert.o
-	gcc -g invert.o -ansi -m32 -Wall -o $(PROGNAME)
+	gcc -g -Wall invert.o -m32 -o $(PROGNAME)
 
 invert.o:    invert.c
-	gcc -g -ansi -m32 -Wall -c -nostdlib -fno-stack-protector invert.c -o invert.o
+	gcc -g -m32 -Wall -c invert.c -o invert.o
 
 #tell make that "clean" is not a file name!
 .PHONY : clean
