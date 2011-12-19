@@ -1,10 +1,12 @@
+#include "font.h"
 
-void puts(char *c){
+void puts(int i, int j){
+  
+      char *c= alphabet[i][j];
 	int length=0;
 	char *t = c;
 	while(*t) ++t;
 	length= t-c;
- // int length= length(c);
   write(1,c,length);
   
 }

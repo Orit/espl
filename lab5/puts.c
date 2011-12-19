@@ -4,7 +4,6 @@ void puts(char *c){
 	char *t = c;
 	while(*t) ++t;
 	length= t-c;
- // int length= length(c);
   write(1,c,length);
   
 }

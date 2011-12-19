@@ -26,11 +26,10 @@ int main(int argc, char *argv[]){
     if(c1!=c2){
      printf("byte \%d", counter);     
      printf(" ");
-    printf("%d", c1);
-    printf(" ");
-     printf("%d", c2);
-    printf("\n");
-   //   break;fprintf
+     printf(c1);
+     printf(" ");
+     printf(c2);
+     printf("\n");
     }
  }
 
