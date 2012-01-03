@@ -5,30 +5,27 @@
 	extern puts
 
  _start:
- 	mov	 eax, esp
- 	add	 eax,4
- 	push	 eax
- 	push	 DWORD [esp+4]
- 	
- 	mov ebx,-1;	
- 	mov ecx,0;
-	mov edx,0;		//counter of the word in the argv array
+  	mov ebx,-1	
+ 	mov ecx,0
+	mov edx,4		   ; counter of the word in the argv array 
 	
 
-Lp1	cmp ebx,6;	     	
-	jge Done;
-	inc ebx;
-	jmp f2;
+Lp1:
+        cmp ebx,6	     	
+	jge Done
+	inc ebx
+	jmp f2
  		
  				    ; esp=argc esp+4= argv
  				    
  f2:	
-	cmp ecx,[esp];
- 	jge Lp1;
+	cmp ecx,[esp]
+ 	jge Lp1
 	add edx,4
 	push ebx	
 	push DWORD[esp+edx]
  	call whileLoop
+        add esp,8
  	inc ecx
  	jmp f2
 
