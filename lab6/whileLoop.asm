@@ -8,6 +8,7 @@ whileLoop:
       push ebp	
       mov ebp, esp	
       mov ebx,1	
+      
       add ebx, [ebp+8]
       movzx ebx, BYTE[ebx]
       cmp bl,0   

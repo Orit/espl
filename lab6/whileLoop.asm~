@@ -9,8 +9,8 @@ whileLoop:
       mov ebp, esp	
       mov ebx,1	
       add ebx, [ebp+8]
-      movzx AL, ebx
-      cmp AL,0   
+      movzx ebx, BYTE[ebx]
+      cmp bl,0   
       je Done
       
       
