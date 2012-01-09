@@ -109,9 +109,20 @@ void run_program() {
     setenv("?", ststr, 1);
     
   }
+  
   else if(pid==0) {
+    
+    
       char c= *(argv[argc-2]);
-      
+	int i;
+	for (i=0; i<argc; ++i){
+	  char tmp= *(argv[i]);
+	  if(tmp=='|'){
+	    pid_t pid2= fork();
+	    
+	  }
+	  	  
+	}
       printf("%c", c);
     if (c=='<'){
       int fd = open(argv[argc-1],O_RDONLY);	//open the file in argv[argc-2]
